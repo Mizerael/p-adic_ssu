@@ -24,7 +24,7 @@ def int_fraction_to_bits(el: Tuple[int, int], deg: int, p: int) -> int:
     return res
 
 
-def convert_f_by_mod(poly_coefs: List[int], mod: int) -> List[int]:
+def convert_f_by_mod(poly_coefs: List[int | tuple], mod: int) -> List[int]:
     res = []
     for coef in poly_coefs:
         if isinstance(coef, tuple):
