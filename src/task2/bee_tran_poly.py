@@ -90,7 +90,8 @@ def check_biective(poly_cf: List[int | tuple]) -> Tuple[bool, str]:
 
 def check_transitive(poly_cf: List[int | tuple]) -> Tuple[bool, str]:
     poly_cf_mod_8 = convert_f_by_mod(poly_cf, 8)
-    status, _ = check_cycling(poly_cf_mod_8, 8)
+    st, cycles = check_cycling(poly_cf_mod_8, 8)
+    status = st & (len(cycles) == 1)
     return (
         status,
         f"Функция {poly_to_str(poly_cf)} {''if status else 'не'}транзитивна",
