@@ -3,7 +3,7 @@ from typing import Callable
 
 
 def f(x: int, mod: int) -> int:
-    return (-7 - 17 * x + 3 * x ^ 2) % mod
+    return (-7 - 17 * x + 3 * x**2) % mod
 
 
 g_r = 11
